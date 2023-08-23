@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Free Cloud Computing Service</title>
+    <link rel="icon" type="images/x-icon" href="data:image/png;base64,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" />
+</head>
+<body>
+    <div>
+    <div class="container-fluid" >
+        <div class="header" style="position:fixed; width: 100%;">
+            <div class="headerOne" style="margin-left: 1px;" >
+                <div class="sub-heading" >
+                    <img src="https://www.metaltoad.com/sites/default/files/styles/large/public/2020-05/aws-logo-blog-header.png?itok=V7llmHtJ" width="10%" style="margin-left: 2px; ">
+                </div>
+                <div class="sub-headingTwo" style="margin-top: 30px;">
+                    <ul class="underList">
+                        <li class="li">Product</li>
+                        <li class="li">Solution</li>
+                        <li class="li">Pricing</li>
+                        <li class="li">Documentation</li>
+                        <li class="li">Learn</li>
+                        <li class="li">partner Network</li>
+                        <li class="li">AWS Marketplace</li>
+                        <li class="li">Customer Enablement</li>
+                        <li class="li">Event</li>
+                        <li class="li">Explore More</li>
+                        <li class="li"><img src="https://img.icons8.com/?size=1x&id=132&format=png" style="width:20x;height:18px ;color:#ffffff;"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="headertwo">
+                <div class="sub-heading2">
+                    <ul class="list">
+                            <li class="li">Contact Us</li>
+                            <li  class="li">Support</li>
+                            <li  class="li">English</li>
+                            <li  class="li">MyAccount</li>
+                            <li  class="li">Sign In</li>
+                            <button  class = 'but'style="width:170px;border-radius: 15px;padding:4px;border: none;font-weight:500;background-color: #ff9900;font-size:14px;size:small">Complete Sign Up</button>
+                    </ul>
+                </div>
+                <!-- <div >hdsdfkjd</div> -->
+            </div>
+            
+        </div>
+        <div class="contain" style="padding: 15px; position: absolute;z-index: -1;" >
+            <div style="display: flex; margin-left: 25%;height: 20px;">
+                <h6 style=" font-family: AmazonEmberBold,Helvetica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif; font-weight: bold;">AWS Free Tier</h6>
+                <ul class="thirdList">
+                    <li style="margin-right: 20px; font-weight: bold;font-size: .77em; font-family: AmazonEmberBold,Helvetica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif;">Overview</li>
+                    <li style="margin-right: 20px; font-weight: bold;font-size: .77em;  font-family: AmazonEmberBold,Helvetica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif; ">FreeTierCatagories</li>
+                    <li style="margin-right: 20px; font-weight: bold;font-size: .77em;  font-family: AmazonEmberBold,Helvetica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif;">HowToCreateAnAccount</li>
+                    <li style="margin-right: 20px; font-weight: bold;font-size: .77em;  font-family: AmazonEmberBold,Helvetica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif;"> FeaturedOffersForBusiness </li>
+                    <li style="margin-right: 20px; font-weight: bold;font-size: .77em;  font-family: AmazonEmberBold,Helvetica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif;"> FAQs</li>
+                    <li style="margin-right: 20px; font-weight: bold;font-size: .77em;  font-family: AmazonEmberBold,Helvetica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif;"> TermsAndConditions</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Backgroud image -->
+        <div class="centerContent" style="z-index: -1;">
+            <div class="container">
+                <h3 style="font-size:56.25px; color: white;">AWS Free Tier</h3><br>
+                <p class="font" style="color: white;font-size:22.5px;"font-family: AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif;">Gain free, hands-on experience with the AWS platform, products, and services<br><br>
+                   <a href="#"> Learn more about AWS Free Tier</a>
+                </p><br>
+                <button class="btn">Create a Free Account</button>
+
+            </div>
+            <div class="credits" >
+                <p class="fonts" ><b style="font-weight: bold;">Startups may be eligible for AWS credits</b> AWS Activate provides eligible startups with a host of resources, including free AWS credits to spend<br> on AWS services, and AWS Support.  <a href="#"> Sign up for Activate Today »</a></p>
+            </div>
+            <div class="fullScreen" style="margin-top: 2% ;" >
+                <div class="screen" >
+                    <h3 style="text-align: center; margin-top: 2%;">Types Of Offers</h3>
+                    <small class="paragraph">Explore more than 100 products and start building on AWS using the Free Tier. Three different types of free offers are available<br>
+                        depending on the product used. Click icon below to explore our offers.</small>
+                        
+                        <div style="display: flex; margin-top: 2%;display:inline-flex; padding: 40px;">
+                            <div class="fontuh">
+                                <img src='https://d1.awsstatic.com/china_topten_guoheng/free/free_2022_offer-type3.4c304d3e7270ac26cd2d32d69c859e409d584b4a.png' style="max-width: 120%;"/>
+                                <h5 style="margin-left: 20%;font-weight: bold;color: #0972d3;;">Free trial</h5><smal class="paragraph" style="text-align: center;">Short-term free trial offers start from the date<br> you activate a particular service</smal>
+                            </div>
+                            <div class="fontuh" style="border-left: 1px solid gray; border-right: 1px solid gray;text-align: center;" >
+                                <img src="https://d1.awsstatic.com/china_topten_guoheng/free/free_2022_offer-type2.ea6111ab538fb69d91bf3aeadd42f405e6250067.png" style="max-width: 120%;">
+                            <h5 style="margin-left: 20%; font-weight: bold;color: #0972d3;;">12 months free</h5><small class="paragraph" style="margin-left: 25px;">Enjoy these offers for 12-months following your <br> initial sign-up date to AWS</small>
+                            </div>
+                            <div  class="fontuh">
+                                <img src="https://d1.awsstatic.com/china_topten_guoheng/free/free_2022_offer-type1.079f9a8333ed945e49ef5dacb464a16c57d862f5.png" style="max-width: 120%;">
+                                <h5 style="margin-left: 20%; font-weight: bold;color: #0972d3;">Always free</h5><small class="paragraph">These free tier offers do not expire and are<br> available to all AWS customers</small>
+                            </div>
+                        </div>
+                     </div>
+
+                     <div style="background-color: #FAFAFA;">
+
+                <!-- <div class="listout" style=""  > -->
+                    <div class="screenTwo">
+                        <h3 class="explore"><b>Explore Top Product Categories</b></h3>
+                    </div>
+                        <div class="screenTwoList" style="width:65%;margin-left: 17%;" >
+                            <ul class="listing" >
+                                <li class="listou">
+                                    <img src="https://d1.awsstatic.com/partner-network/partner_marketing_web_team/Compute_32.bee1aa0c18b32b8f4f594ec75b293c1c1c9e8092.png" width="25%" style="margin-left: 7%;margin-top: 9px;"><h5 class="commonFont" style="font-size:90%;margin-top: 8px;">Compute</h5>
+                                </li>
+                                <li class="listou"><img src="https://d1.awsstatic.com/partner-network/partner_marketing_web_team/Database_32.4c486bfccd1c77227c5e2533bf14ce6889bc9731.png" width="25%" style="margin-left: 7%;margin-top: 9px;"><h5 class="commonFont" style="font-weight: bold;font-size:90%;margin-top: 8px;">DataBase</h5></li>
+                                <li class="listou"><img src="https://d1.awsstatic.com/partner-network/partner_marketing_web_team/Storage_32.d5c09d7153f2d4c3fb7d54c74fce88be17e8af16.png" width="25%" style="margin-left: 7%;margin-top: 9px;"><h5 class="commonFont" style=" font-weight: bold;font-size:90%;margin-top: 8px;">Storage</h5></li>
+                                <li class="listou"><img src="https://d1.awsstatic.com/partner-network/partner_marketing_web_team/container_32.dc39a615d6586501a56c583a579b9df27d097b45.png" width="25%" style="margin-left: 7%;margin-top: 9px;"><h5 class="commonFont" style=" font-weight: bold;font-size:90%;margin-top: 8px;">Cotainers</h5></li>
+                                <li class="listou"><img src="https://d1.awsstatic.com/partner-network/partner_marketing_web_team/squid-ink-Mobile_32.db69f8c5701a7949a7e652f28afba3d877e6003c.png" width="25%" style="margin-left: 7%;margin-top: 9px;"><h5 class="commonFont" style=" font-weight: bold;font-size:90%;margin-top: 8px;">Web & Mobile Apps</h5></li>
+                                <li class="listou"><img src="https://d1.awsstatic.com/partner-network/partner_marketing_web_team/Serverless_32.dc2af453371bf7a98b5334ab83a758886650f3fc.png" width="25%" style="margin-left: 7%;margin-top: 9px;"><h5 class="commonFont" style="font-weight: bold;font-size:90%;margin-top: 8px;">Serverless</h5></li>
+                                <li class="listou"><img src="https://d1.awsstatic.com/partner-network/partner_marketing_web_team/Machine-Learning_Icon_32.0378221697a0a63e46005241c49c11c4ab364f0c.png" width="18%" style="margin-left: 7%;margin-top: 9px;"><h5 class="commonFont" style="font-weight: bold;font-size:90%;margin-top: 8px;">Machine Learn</h5></li>
+                            </ul>
+                        </div>
+                    <!-- </div> -->
+                    <div style="margin-left: 17%;">
+                        <h3 class="explore" style="font-weight: bold;">Free Tier details</h3>
+                    </div>
+                    <div class="mainBox" >
+                        <div class="leftBox">
+                            <h5 class='fontuh'style="margin-top: 10%;text-align: start;font-weight margin-left: 9%;font-weight:bold">Filter by:</h5>
+                            <p style="text-align: start;margin-left: 9%"><a href="#" style="text-decoration: none;">Clear all filters</a></p>
+                            <div>
+                               <h5 class="fontuh" style="font-size: 18px; font-weight: bold;text-align: start;margin-left: 9%"> Tier Type</h5><hr>
+                               <div style="display: grid;text-align: start;position: absolute;margin-left: 1%;">
+                                <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Featured</label></div>
+                                <div class="leftBar"><input type="checkbox"/>&nbsp;<label>12Months Free</label></div>
+                                <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Always Free</label></div>
+                                <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Trials</label></div>&nbsp;
+
+                                <h5 class='fontuh' style="font-weight: bold;">Product Categories:</h5>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Analytics</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Application Integration</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Business Productivity</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Compute</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Containers</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Customer Engagement</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Database</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Developer tools</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>End User Computing</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Front-End Web & Mobile</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Game Tech</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Internet of Things</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Machine Learning</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Management & Governance</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Media Services</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Migration & Transfer</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Networking & Content<br> Delivery</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Robotics</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Security, Identity, & <br>Compliance</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Serverless</label></div>
+                                    <div class="leftBar"><input type="checkbox"/>&nbsp;<label>Storage</label></div>
+                               </div>
+                            </div>
+
+
+                        </div>
+                        <div class="RightBox">
+                            <div style="margin-top: 20px;">
+
+                                <input type="search" placeholder="search free tier products" class="search"/> <br>
+                            </div>
+                            <div>
+                                <!-- firstroe -->
+                                <div class="firstLine">
+                                    <div class="firste" style="padding: 8px;">
+                                        <h6 class="fon">COMPUTE</h6>
+                                        <hr>
+                                        <div class="firstB">
+                                            <p>Free Tier</p>
+                                            <p>12MONTHS FREE</p>
+                                        </div>
+                                        <h2 class="firstB1">Amazon EC2</h2>
+                                            <p class="firstB1" style='font-weight: bold;font-size: 35px;'>750 Hours</p>
+                                            <div>
+                                                <p class="fontuh" style="text-align: start; margin-left: 2%;">Resizable compute capacity in the Cloud.</p>
+                                                <small style="font-size: 10px;">750 hours per month of t4g.small instance dependent</small>
+                                            </div>
+                                    </div>
+
+
+
+                                    <div class="firste"style='padding:10px'>
+                                        <h6 class="fon">DATABASE</h6>
+                                        <hr>
+                                        <div style="justify-content: space-around;display: flex;font-size: 15px;">
+                                            <p>Free Tier</p>
+                                            <p>12MONTHS FREE</p>
+                                        </div>
+                                        <h2 class="firstB1">Amazon RDS</h2>
+                                        <p class="firstB1" style='font-weight: bold;font-size: 35px;'>750 Hours</p>
+                                        <div>
+                                            <p class="fontuh" style="text-align: start; margin-left: 2%;">Managed Relational Database<br> Service for MySQL, PostgreSQL,<br> MariaDB, or SQL Server..</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="firste" style='padding:10px'>
+                                        <h6 class="fon">STORAGE</h6>
+                                        <hr>
+                                        <div style="justify-content: space-around;display: flex;font-size: 13px;">
+                                            <p>Free Tier</p>
+                                            <p>12MONTHS FREE</p>
+                                        </div>
+                                        <h2 class="firstB1">Amazon S3</h2>
+                                        <p class="firstB1" style='font-weight: bold;font-size: 35px;'>5 GB</p>
+                                        <div>
+                                            <p class="fontuh" style="text-align: start; margin-left: 2%;">Secure, durable, and scalable object storage infrastructure.</p>
+                                            <small style="font-size: 10px;">5 GB of Standard Storage</small>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <!-- secondrow -->
+                                <div class="firstLine">
+                                        <div class="firste" style="padding: 8px;">
+                                            <h6 class="fon">DATABASE</h6>
+                                            <hr>
+                                            <div class="firstB">
+                                                <p>Free Tier</p>
+                                                <p>12MONTHS FREE</p>
+                                            </div>
+                                            <h2 class="firstB1">Amazon DynamoDB</h2>
+                                                <p class="firstB1" style='font-weight: bold;font-size: 35px;'>25 GB</p>
+                                                <div>
+                                                    <p class="fontuh" style="text-align: start; margin-left: 2%;">Fast and flexible NoSQL database<br> with seamless scalability..</p>
+                                                    <small style="font-size: 10px;">25 GB of Storage</small>
+                                                </div>
+                                        </div>
+                                        <div class="firste" style="padding: 8px;">
+                                            <h6 class="fon">MACHINE LEARNING<p style="float: right;color: orange;font-size: 10px;">NEW</p></h6>
+                                            <hr>
+                                            <div class="firstB">
+                                                <p>Free Tier</p>
+                                                <p>12MONTHS FREE</p>
+                                            </div>
+                                            <h2 class="firstB1">Amazon SageMaker</h2>
+                                                <p class="firstB1" style='font-weight: bold;font-size: 35px;'>2 Months</p>
+                                                <div>
+                                                    <p class="fontuh" style="text-align: start; margin-left: 2%;">Machine learning for every data scientist and developer..</p>
+                                                    <small style="font-size: 10px;">25 hours per month on ml.m5.4xlarge </small>
+                                                </div>
+                                        </div>
+                                        <div class="firste" style="padding: 10px;">
+                                            <h6 class="fon">COMPUTE</h6>
+                                            <hr>
+                                            <div class="firstB">
+                                                <p>Free Tier</p>
+                                                <p>12MONTHS FREE</p>
+                                            </div>
+                                            <h2 class="firstB1">AWS Lambda</h2>
+                                                <p class="firstB1" style='font-weight: bold;font-size: 35px;'>1 Million</p>
+                                                <div>
+                                                    <p class="fontuh" style="text-align: start; margin-left: 2%;">Compute service that runs your <br>code in response and automatically manages the compute resources.</p>
+                                                    <!-- <small style="font-size: 10px;">25 hours per month on ml.m5.4xlarge </small> -->
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- thrid row -->
+                                <div class="firstLine">
+                                    <div class="firste" style="padding: 8px;">
+                                        <h6 class="fon">ANALYTICS</h6>
+                                        <hr>
+                                        <div class="firstB">
+                                            <p>Free Tier</p>
+                                            <p>12MONTHS FREE</p>
+                                        </div>
+                                        <h2 class="firstB1">Amazon Redshift</h2>
+                                            <p class="firstB1" style='font-weight: bold;font-size: 35px;'>2 Month</p>
+                                            <div>
+                                                <p class="fontuh" style="text-align: start; margin-left: 2%;">Fast, simple, cost-effective data warehousing..</p>
+                                                <small style="font-size: 10px;">Two-month free trial</small>
+                                            </div>
+                                    </div>
+
+
+                                     
+                                    <div class="firste" style="padding: 8px;">
+                                        <h6 class="fon">ANALYTICS <p style="float: right;color: orange;font-size: 10px;">NEW</p></h6>
+                                        <hr>
+                                        <div class="firstB">
+                                            <p>Free Tier</p>
+                                            <p>12MONTHS FREE</p>
+                                        </div>
+                                        <h2 class="firstB1">Amazon OpenSearch</h2>
+                                            <p class="firstB1" style='font-weight: bold;font-size: 35px;'>750 Hours</p>
+                                            <div>
+                                                <p class="fontuh" style="text-align: start; margin-left: 2%;">Managed service that makes  perform interactive log <br>analytics, real-time application <br>monitoring, website search, and more.</p>
+                                                <!-- <small style="font-size: 10px;">750 hours per month of a single-AZ<br> t2.small.search or t3.small.search instance</small> -->
+                                            </div>
+                                    </div>
+                                   
+                                    
+                                    <div class="firste" style="padding: 8px;">
+                                        <h6 class="fon">MOBILE</h6>
+                                        <hr>
+                                        <div class="firstB">
+                                            <p>Free Tier</p>
+                                            <p>12MONTHS FREE</p>
+                                        </div>
+                                        <h2 class="firstB1">Amazon SNS</h2>
+                                            <p class="firstB1" style='font-weight: bold;font-size: 35px;'>1 Million</p>
+                                            <div>
+                                                <p class="fontuh" style="text-align: start; margin-left: 2%;">Fast, flexible, fully managed push<br> messaging service.</p>
+                                                <small style="font-size: 10px;">1,000,000 Publishes</small>
+                                            </div>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class='finalClass'><div class='finalClass1'><h6 class='finalClass2' style="display: flex;list-style-type: none;"><li class="space">1</li><li class="space">2</li><li class="space">3</li><li class="space">></li></h6></div></h3>
+                        </div>
+                        </div>
+                        </div>
+
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+</div>
+
+    
+        
+</body>
+</html>

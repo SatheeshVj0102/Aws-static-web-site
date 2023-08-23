@@ -1,0 +1,302 @@
+.col{
+    background-color: yellow;
+}
+.commonFont{
+    font-family: 'AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif';
+
+}
+
+.header{
+    /* width: 100% !important; */
+    height: 115px !important;
+    background-color: #232f3e;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+
+}
+.headerOne{
+    width: 80%;
+}
+.headertwo{
+    width: 50%
+}
+.sub-heading {
+    width: 100%;
+    height: 38%;
+    /* margin-left: 60px; */
+    margin-top: 5px;
+
+}
+.sub-heading2{
+    width: 100%;
+    height: 40%;
+    margin-left: 90px;
+    margin-top: 20px;
+
+}
+.sub-headingtwo{
+    width: 100%;
+    height: 40%;
+    margin-top: 70px;
+
+}
+
+.list{
+    list-style-type:none;
+    word-spacing: 10px !important;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+.li{
+    margin-right: 15px;
+    font-family: 'AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif';
+    font-size: 16px;
+}
+.underList{
+    list-style-type: none;
+    word-spacing: 20px;
+    display: flex;
+    /* font-family: 'AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif';
+     */
+     font-family: 'AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif';
+    margin-top: 10px;
+    color: white;
+}
+
+/* second div tage */
+/* join AWS in supporting relief efforts for those impacted by Maui wildfires.  */
+
+.joinHeading{
+    font-family: 'AmazonEmberBold, "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, sans-serif';
+    color: #333333;
+    font-size:16.875px;
+    padding: 15px !important;
+    font-size: 1.3rem;
+    /* margin-top: 20px; */
+    text-align: center;
+    font-weight: 500px;
+    font-style: normal;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.contain{
+    margin-top: 111px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    color: #333;
+}
+.thirdList{
+    /* display: flex; */
+    list-style-type: none;
+    font-family: 'AmazonEmberBold,Helvetica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif';
+    font-size: 20px;
+    font-weight: 400px;
+    display: flex;
+    word-spacing: 10px;
+}
+.font{
+    font-family: 'AmazonEmberBold,Helvetica Neue Bold,Helvetica Neue,Helvetica,Arial,sans-serif';
+    font-size: 23px;
+}
+.btn{
+    border-radius: 17px;
+    width: 33%;
+    font-weight: bold;
+    font-size: 15px;
+    background-color:#ff9900 ;
+}
+.centerContent{
+    color: #333;
+    background-image: url('https://d1.awsstatic.com/background-ft.7d2fb720994cd2a2696fe47a1c2454fc5cc5bd41.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 8.7%;
+    top: 0 !important;
+    left: 0 !important; 
+    width: 100%; 
+    height: 70%;
+    position: absolute;
+
+}
+.container{
+    text-align: center;
+    height: 100%;
+    padding: 6%;
+
+}
+.fonts{
+    font-family :'AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif';
+    height: 70  px;
+    margin-left: 18%;
+    width: 70%;
+    font-size: 20px;
+    /* word-spacing: 6px; */
+    padding: 9px;
+    color:#333;
+}
+.credits{
+    width: 100%;
+    /* position: absolute;  */
+    background-image:linear-gradient(to right, white, #fe9da0);
+
+}
+.screen{
+    width: 65%;
+    height: auto;
+    /* border: 1px solid gray;
+     */
+    margin-left: 17% ;
+}
+.fullScreen{
+    height: 100%;
+    text-align: center;
+    
+}
+.paragraph{
+    font-family :'AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif';
+    font-size: 15.5px;
+    text-align: center;
+}
+
+.move{
+    margin-left: 4px;
+}
+
+.fontuh{
+    font-family :'AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif';
+}
+.imgae2{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+.explore{
+    margin-right: 10px;
+    text-align: start;
+    font-family :'AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif';
+    margin-top: 1%;
+}
+.screenTwo{
+    width: 65%;
+    margin-left: 17% ;
+
+ }
+ .listou{ 
+    /* border: 1px solid gray; */
+    box-shadow: 0px 0px 2.5px rgb(179, 176, 176);
+    border-radius: 1%;
+    
+    width: 150px;
+    height: auto;
+
+}
+.listing{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-top: .5%;
+    justify-content: space-between;
+} 
+.mainBox{
+margin-left: 17%;
+display: flex;
+height: 100%;
+width: 65%;
+height: 400%;
+}
+.leftBox{
+    width: 20%;
+    height: 100%;
+
+}
+.RightBox{
+    width: 100%;
+    height: 100%;
+}
+.leftBar{
+    margin-top: 5%;
+    font-size: 15px;
+}
+
+/* rightbox */
+.firstLine{
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+    margin-right: 3%;
+    margin-top: 5%;
+}
+
+.firste{
+    height: 355px;
+    width: 29%;
+    /* height: 30%; */
+    /* width: 90%; */
+    margin-right: 10px;
+    /* height: 30%; */
+    border: 1px solid gray;
+    border-radius: 1%;
+    margin-left: 5%;
+    box-shadow: 0px 0px 2.5px rgb(179, 176, 176);
+}
+.fon{
+    font-size: 13px;
+    font-family :'AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif';
+    text-align: start;
+    margin-left: 2%;
+    font-weight: bold;
+    margin-top: 2%;
+}
+.firstB{
+    justify-content: space-around;
+    display: flex;
+    font-size: 15px;
+    text-align: start !important;
+}
+.firstB1{
+    font-size: 25px;
+    color: #0972d3;
+    text-align: start;
+    margin-left:2% ;
+    margin-right: 4px;
+    font-family: 'AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif';
+}
+.search{
+    width: 90%;
+    padding: 2px;
+    font-family: 'AmazonEmber, "Helvetica Neue", Helvetica, Arial, sans-serif';
+}
+.finalClass{
+    /* border: 1px solid black; */
+    margin-top: 15px;
+    font-size: 15px;
+    padding: 10px;
+}
+.finalClass1{
+    /* border: 1px solid rgb(77, 75, 75); */
+    width: 43px;
+    height: 40px;
+    margin-left: 46%;
+}
+.finalClass2{
+    text-align: center;
+    margin-top: 15px;
+    padding: 2px;
+}
+.space{
+    width: 140px;
+    margin-right: 5px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 2px;
+    /* border: 1px solid gray; */
+    box-shadow: 0px 0px 7px rgb(179, 176, 176);
+
+}
